@@ -1,14 +1,16 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import Photo from './Photo'
 
 const ContentWrapper = () => {
+    const mode = useSelector((state) => state.mode)
 
     return (
-        <div className="ContentWrapper" style={{'backgroundColor': 'white'}}>
+        <div className="ContentWrapper" style={{ 'backgroundColor': mode.color4 }}>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac sollicitudin lorem. Sed porta placerat felis, sit amet commodo justo ultricies quis. Morbi pretium massa quam, id tincidunt orci scelerisque ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut eleifend, nisi sit amet faucibus aliquet, quam sem feugiat ante, sit amet dignissim orci est at risus. Sed tincidunt, lorem eget laoreet egestas, felis nisi tristique arcu, sed suscipit diam risus auctor arcu. Cras sit amet nunc tellus. Duis aliquet convallis lectus, ut pulvinar tellus ultrices id. Sed eu malesuada augue. Nullam auctor eget sem eu vestibulum. Morbi sit amet maximus tellus.</p>
 
             <p>Vestibulum elementum risus justo, et porttitor nunc efficitur sit amet. Nunc eget dui vel nulla maximus vestibulum. Mauris sit amet vestibulum nunc. Sed consectetur nunc arcu, vel facilisis lacus laoreet vitae. Aliquam nec fringilla est. Aliquam finibus eget tortor placerat cursus. Ut lacus lorem, venenatis pulvinar facilisis ut, varius viverra justo. Sed ut libero dui.</p>
-            
+
             <Photo />
 
             <p>Sed justo ligula, dapibus ac nunc hendrerit, cursus porttitor urna. Integer aliquet augue in rutrum consequat. Nulla facilisi. Donec ullamcorper suscipit placerat. Integer vel dui eros. Cras placerat ipsum justo, sit amet porttitor ex molestie id. Proin et malesuada lorem, sit amet tincidunt odio.</p>

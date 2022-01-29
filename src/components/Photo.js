@@ -1,9 +1,14 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+import { darkMode } from '../features/modeSlice'
+
 const Photo = () => {
+
+    const mode = useSelector((state) => state.mode)
 
     return (
         <div className="Photo">
-            <img src='https://placekitten.com/200/300' alt="author" />
+            <img src={mode.photo} alt="author" />
         </div>
     )
 }
